@@ -5,6 +5,6 @@ go:
 
 before_script:
   # Needed until travis ci is added to joyent
-  - cd .. && ln -s cg50x joyent
+  - cd ../.. && ln -s cg50x joyent && ls
 script:
   - go test ./...
