@@ -8,3 +8,4 @@ before_script:
   - cd ../.. && ln -s cg50x joyent && ls
 script:
   - go test ./...
+  # Testing PR
