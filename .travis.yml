@@ -1,11 +1,10 @@
 language: go
-
 go:
-  - 1.9.x
-
+- 1.9.x
 before_script:
-  # Needed until travis ci is added to joyent
-  - cd ../.. && ln -s cg50x joyent && ls
+- cd ../.. && ln -s cg50x joyent && ls
 script:
-  - go test ./...
-  # Testing PR and more changes
+- go test ./...
+deploy:
+  api-key:
+    secure: fskhix8WkS21by2KzyOvxh9sKmANxZifcxZRdHXayoLaqqk5XMFSo5EYdEW+ypzKrBix6HxzUuSOBVlhSgN6DdUXpWnzoYbJYZ7owtWuaSAur47DWhc4JTkFH0anT6gFUHwPd5N01ysD0Yahn8CRQzW33ChE8qOdIw48I2/S63Q10ZsO1obkFUhluvR/CsmmICh5rCCUlcBv6RDIZYgStGErQMTRQnDLuB8i+g7bL8tGL1WbSUtXDKmVohpw6Kw4Bd/gcEfZ8x+q2XDaKIJC6+N6nNmi9ProRP7DlIUH9mnIqv7J7h0b0izuZJh7um40TecuxIofzYWNRvSzBj2gdoorVaqmzKYpGtmn8eNchWMSsVWZdnFs21zb9fwnsOAUmiNbsUFOccLrPyK2MoNW4W1nS9d20bXEAs9M6mzz3lciFAe0Lo6Xe/KrErRjXuWULUSaVLcFNfTXrrDA06zRjGaurgqMi63zf/w3dmhuncDvw8hPRU9/tZBjp31FB05Kqfxn4ce35zc68FfO5L7oUa9bMz5VPU0NRLh3pl5XTpHOK1piiXinIWAy51S8xwtBCO5i/O9VBbo9pNzrlheHzQd0eC3t8SE1LNafvUy2hUSfjm0Z1+cXBQN8DsPPlqzoiODH+iq5vinTfPrqsrZMokWB8MIR/xTegcwXRNIS8Xw=
